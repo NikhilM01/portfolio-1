@@ -27,10 +27,11 @@ a{
   position: fixed;
   padding: 0.3rem; 
    border-radius: 50%;
-  background-color: #0E8388;
+  background-color: #fff;
 
   transition: transform 0.3s ease;
   z-index: 9999;
+  mix-blend-mode: difference; 
 }
 
 .hover-this:hover ~ .cursor,
@@ -356,7 +357,7 @@ nav > div{
 
 }
 .menu-item p:hover{
-  letter-spacing: 0.050em;
+  letter-spacing: 0.004em;
 }
 .menu-item p#active::after{
   content: "";
