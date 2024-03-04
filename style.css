@@ -12,11 +12,11 @@
 
 html,
 body {
-  height: 100vh;
-  width: 100vw;
-  color: #CBE4DE;
+min-height: 100vh;
+  width: 100%;
   background-color: #03001C;
   margin: 0;
+  padding: 0;
   cursor: none;
   overflow-x: hidden;
 }
@@ -28,7 +28,7 @@ a{
 .cursor {
   pointer-events: none;
   position: fixed;
-  padding: 0.3rem; 
+  padding: 0.5rem; 
    border-radius: 50%;
   background-color: #fff;
 
@@ -45,21 +45,25 @@ a{
 
 /*=============== SCROLL BAR ===============*/
 body::-webkit-scrollbar {
-  z-index: 9999;
+  z-index: 11;
+  cursor: default;
 }
 
 ::-webkit-scrollbar {
   width: .6rem;
   background-color: hsl(0, 0%, 46%);
+  cursor: default;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: .5rem;
   background-color: #B6EADA;
+  cursor: default;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #CBE4DE;
+  cursor: default;
 }
 
 .loading-screen{
@@ -124,7 +128,7 @@ body::-webkit-scrollbar {
 .loader-2{
   position: relative;
   background: #03001C;
-  width: 200px;
+  width: 400px;
   /* width: 200px; */
 
 }
@@ -198,20 +202,24 @@ h1{
 .button-container {
   position: relative;
   width: 300px;
-  height: 100px;
+  height: 90px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40vh;
+  margin-top: 2vh;
   overflow: hidden;
   transition: 0.5s;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #ffffff;
+  transition: .4s;
+  display: block;
+
+
 }
 
 .button-container button {
-  width: 101%;
+  width: 100%;
   height: 100%;
   font-family: "Monument Extended", sans-serif;
-  font-size: 40px;
+  font-size: 36px;
   background: #fff;
   -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
   mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
@@ -234,7 +242,7 @@ h1{
   width: 101%;
   font-family: "Monument Extended", sans-serif;
   font-weight: lighter;
-  font-size: 40px;
+  font-size: 36px;
   margin-top: 25px;
   overflow: hidden;
 }
@@ -275,6 +283,7 @@ nav{
   color: #CBE4DE;
   display: none;
   mix-blend-mode: difference;
+  backdrop-filter: blur(10px);
 }
 nav > div{
   flex: 1;
@@ -433,7 +442,7 @@ nav > div{
 
 .work__Left{
   position: relative;
-  width: 54%;
+  width: 45%;
   z-index: 2;
 }
 
@@ -482,20 +491,20 @@ nav > div{
   text-decoration: none;
   color: #CBE4DE;
   letter-spacing: 4px;
-  border: 2px solid red;
-  border-radius: 30px;
+  border: 2px solid #fff;
+  font-weight: ;
   transition: .4s;
 
 }
 
 .work__link:hover{
-  background: red;
-  color: orange;
-  letter-spacing: 6px;
+  background: #fff;
+  color: #000;
+  
 }
 
 .work__right{
-  width: 46%;
+  width: 48%;
   height: auto;
 }
 
@@ -520,9 +529,11 @@ nav > div{
   position: absolute;
   width: 100%;
   height: 100%;
-  cursor: pointer ;
-  border-radius: 80px;
+  sor: pointer ;
+  border-radius: 3px;
   overflow: hidden;
+
+  
 }
 
 .work__photo-item img{
