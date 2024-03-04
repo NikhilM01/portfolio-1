@@ -492,7 +492,7 @@ nav > div{
   color: #CBE4DE;
   letter-spacing: 4px;
   border: 2px solid #fff;
-  font-weight: ;
+  font-weight: 600;
   transition: .4s;
 
 }
@@ -529,7 +529,7 @@ nav > div{
   position: absolute;
   width: 100%;
   height: 100%;
-  sor: pointer ;
+  cursor: pointer;
   border-radius: 3px;
   overflow: hidden;
 
