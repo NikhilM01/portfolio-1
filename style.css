@@ -157,6 +157,10 @@ body::-webkit-scrollbar {
   position: relative;
   width: 100%;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
 
 }
@@ -177,6 +181,7 @@ h1{
   margin: 0 10px;
   text-transform: uppercase;
   font-weight: 500;
+  color: #CBE4DE;
 }
 
 .header-revealer{
@@ -197,7 +202,12 @@ h1{
   top: 80px;
 } */
 
-
+.hero-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
 /* -----------Hover Button-------- */
 .button-container {
   position: relative;
