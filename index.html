@@ -11,14 +11,20 @@
 <body>
     <div class="website-content">
         <div class="cursor"></div>
+
         <div class="header">
             <div class="h1">
-                <h1>Sculpting Digital Aesthetics </h1>
+                <h3>Hey, I'm Nikhil </h3>
 
             </div>
             <div class="h1">
-                <h1>with Code Magic</h1>
+                <h1>Sculpting Digital Aesthetics </h1>
             </div>
+
+            <div class="h1">
+                <h1>with Code <span>Magic</span></h1>
+            </div>
+
             <div class="hero-buttons">
                 <div class="button-container">
                     <span class="mask">RESUME</span>
@@ -31,7 +37,9 @@
             </div>
 
 
+
         </div>
+
 
         <div class="spacer"></div>
         <section class="projects-section">
@@ -111,10 +119,16 @@
                 </div>
             </div>
         </section>
+
+        <section class="skills-section">
+         
+        </section>
         <div class="spacer"></div>
 
 
-
+        <section class="skills-section">
+           
+        </section>
 
 
         <div class="spacer">
@@ -122,7 +136,77 @@
             <svg width="16" height="16" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="8" height="8" fill="currentColor"></rect></svg>
             <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5.99922" cy="5.99995" r="4.5" stroke="currentColor" stroke-width="0.6"></circle><line x1="5.99922" y1="1.31131e-08" x2="5.99922" y2="12" stroke="currentColor" stroke-width="0.6"></line><line y1="6.00005" x2="12" y2="6.00005" stroke="currentColor" stroke-width="0.6"></line></svg> -->
         </div>
+        <div class="logos">
+            <div class="logos-slide">
+                <div class="item">
+                    <img src="./assets/Skills/html.png" />
+                    <span class="marquee__text">
+                        <img class="star" src="assets/star.svg" alt="">
+                        marquee <span>Text</span>
+                        <img class="star" src="assets/star.svg" alt="">
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="./assets/Skills/css.png" />
+                    <span class="marquee__text">
+                        <img class="star" src="assets/star.svg" alt="">
+                        marquee <span>Text</span>
+                        <img class="star" src="assets/star.svg" alt="">
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="./assets/Skills/javascript.png" />
+                    <span class="marquee__text">
+                        <img class="star" src="assets/star.svg" alt="">
+                        marquee <span>Text</span>
+                        <img class="star" src="assets/star.svg" alt="">
+                    </span>
 
+                </div>
+                <div class="item">
+                    <img src="./assets/Skills/tailwind.png" />
+                    <span class="marquee__text">
+                        <img class="star" src="assets/star.svg" alt="">
+                        marquee <span>Text</span>
+                        <img class="star" src="assets/star.svg" alt="">
+                    </span>
+
+                </div>
+                <div class="item">
+                    <img src="./assets/Skills/react.png" />
+                    <span class="marquee__text">
+                        <img class="star" src="assets/star.svg" alt="">
+                        marquee <span>Text</span>
+                        <img class="star" src="assets/star.svg" alt="">
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="./assets/Skills/java.png" />
+                    <span class="marquee__text">
+                        <img class="star" src="assets/star.svg" alt="">
+                        marquee <span>Text</span>
+                        <img class="star" src="assets/star.svg" alt="">
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="./assets/Skills/mysql.png" />
+                    <span class="marquee__text">
+                        <img class="star" src="assets/star.svg" alt="">
+                        marquee <span>Text</span>
+                        <img class="star" src="assets/star.svg" alt="">
+                    </span>
+                </div>
+                <div class="item">
+                    <img src="./assets/Skills/framer.png" />
+                    <span class="marquee__text">
+                        <img class="star" src="assets/star.svg" alt="">
+                        marquee <span>Text</span>
+                        <img class="star" src="assets/star.svg" alt="">
+                    </span>
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
@@ -134,7 +218,7 @@
             <p>Nikhil M.</p>
         </div>
         <div class="logo ">
-            <p><a href="#"> The Elite Portfolio</a></p>
+            <p><img src="./assets/logo.png" alt=""></p>
         </div>
         <div class="toggle-btn ">
             <!-- <button class="burger" onclick="this.classList.toggle('active');"></button> -->
@@ -205,8 +289,11 @@
             </div>
         </div>
     </div>
+    <script>
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
+    </script>
 
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

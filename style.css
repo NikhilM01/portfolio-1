@@ -1,6 +1,21 @@
 @font-face {
   font-family: Gilroy;
-  src: url(./Gilroy-Medium.ttf);
+  src: url(./Fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+  font-family: against;
+  src: url(./Fonts/against\ regular.ttf);
+}
+
+@font-face {
+  font-family: Emotions;
+  src: url(./Fonts/Emotions-Condensed-Demo-BF64d2094a30add.ttf);
+}
+
+@font-face {
+  font-family: Felicidade;
+  src: url(./Fonts/FelicidadeDEMO.otf);
 }
 
 * {
@@ -12,15 +27,17 @@
 
 html,
 body {
-min-height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #03001C;
   margin: 0;
   padding: 0;
   cursor: none;
   overflow-x: hidden;
+  color: #CBE4DE;
 }
-a{
+
+a {
   text-decoration: none;
 }
 
@@ -28,17 +45,17 @@ a{
 .cursor {
   pointer-events: none;
   position: fixed;
-  padding: 0.5rem; 
-   border-radius: 50%;
+  padding: 0.5rem;
+  border-radius: 50%;
   background-color: #fff;
-
   transition: transform 0.3s ease;
   z-index: 9999;
-  mix-blend-mode: difference; 
+  mix-blend-mode: difference;
 }
 
-.hover-this:hover ~ .cursor,
-.spacer:hover ~ .cursor { /* Add this line to target the cursor for the entire page */
+.hover-this:hover~.cursor,
+.spacer:hover~.cursor {
+  /* Add this line to target the cursor for the entire page */
   transform: translate(-50%, -50%) scale(8);
 }
 
@@ -66,7 +83,7 @@ body::-webkit-scrollbar {
   cursor: default;
 }
 
-.loading-screen{
+.loading-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -75,9 +92,11 @@ body::-webkit-scrollbar {
   background: #CBE4DE;
   color: #03001C;
   pointer-events: none;
+  cursor: none;
+  z-index: 3;
 }
 
-.counter{
+.counter {
   position: fixed;
   left: 50px;
   bottom: 50px;
@@ -85,64 +104,65 @@ body::-webkit-scrollbar {
   height: 100px;
   font-size: 100px;
   line-height: 102px;
-  clip-path: polygon(0 0,100% 0,100% 100px, 0 100px);
+  clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
   font-weight: 400;
 }
 
 .counter-1,
 .counter-2,
-.counter-3{
+.counter-3 {
   position: relative;
   top: -15px;
 }
 
-.num1offset1{
+.num1offset1 {
   position: relative;
   right: -25px;
 }
- 
-.num1offset2{
+
+.num1offset2 {
   position: relative;
   right: -10px;
 }
- 
-.loader{
+
+.loader {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 600px;
   height: 50px;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   background: #474E68;
 }
 
-.loader-1{
+.loader-1 {
   position: relative;
   background: #03001C;
   /* width: 200px; */
   width: 200px;
- 
+
 }
 
-.loader-2{
+.loader-2 {
   position: relative;
   background: #03001C;
   width: 400px;
   /* width: 200px; */
 
 }
-.loader-3{
+
+.loader-3 {
   position: relative;
   background: #03001C;
   width: 200px;
 }
 
-.bar{
+.bar {
   height: 50px;
 }
 
-.website-content{
+.website-content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -153,7 +173,7 @@ body::-webkit-scrollbar {
 
 }
 
-.header{
+.header {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -165,31 +185,68 @@ body::-webkit-scrollbar {
 
 }
 
-.h1{
+.h1 {
   display: flex;
-  
 }
 
-h1{
+h1 {
   font-size: 80px;
+
 }
 
-.header .h1 h1{
+.header .h1 h1 {
   text-align: center;
   position: relative;
   top: 80px;
-  margin: 0 10px;
   text-transform: uppercase;
   font-weight: 500;
-  color: #CBE4DE;
+  font-family: against;
+
 }
 
-.header-revealer{
+.header .h1 h3 {
+  text-align: center;
+  position: relative;
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 3vh;
+}
+
+
+.header .h1 h1 span {
+  font-family: against;
+  color: blue;
+  font-weight: 800;
+  background: linear-gradient(to right,
+      #0f4fc6 20%,
+      #00affa 30%,
+      #0190cd 70%,
+      #2971d0 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 5s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+/* .header-revealer {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
 /* .header-revealer:after{
   content: "";
@@ -202,26 +259,26 @@ h1{
   top: 80px;
 } */
 
-.hero-buttons{
+.hero-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3em;
 }
+
 /* -----------Hover Button-------- */
 .button-container {
   position: relative;
-  width: 300px;
-  height: 90px;
+  width: 16vw;
+  height: 8vh;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2vh;
+  margin-top: 12vh;
   overflow: hidden;
   transition: 0.5s;
   border: 1px solid #ffffff;
   transition: .4s;
   display: block;
-
 
 }
 
@@ -229,7 +286,7 @@ h1{
   width: 100%;
   height: 100%;
   font-family: "Monument Extended", sans-serif;
-  font-size: 36px;
+  font-size: 2em;
   background: #fff;
   -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
   mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
@@ -249,11 +306,12 @@ h1{
   position: absolute;
   color: #fff;
   text-align: center;
+  justify-content: center;
   width: 101%;
   font-family: "Monument Extended", sans-serif;
   font-weight: lighter;
-  font-size: 36px;
-  margin-top: 25px;
+  font-size: 2em;
+  margin-top: 20px;
   overflow: hidden;
 }
 
@@ -262,6 +320,7 @@ h1{
     -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
   }
+
   to {
     -webkit-mask-position: 0 0;
     mask-position: 0 0;
@@ -273,6 +332,7 @@ h1{
     -webkit-mask-position: 0 0;
     mask-position: 0 0;
   }
+
   to {
     -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
@@ -282,7 +342,7 @@ h1{
 
 
 /* ----Navbar------ */
-nav{
+nav {
   position: fixed;
   width: 100%;
   display: flex;
@@ -295,30 +355,29 @@ nav{
   mix-blend-mode: difference;
   backdrop-filter: blur(10px);
 }
-nav > div{
+
+nav>div {
   flex: 1;
 }
 
-.logo{
+.logo {
   text-align: center;
 }
-.logo a{
-  text-decoration: none;
-  font-size: 30px;
-  color: #CBE4DE;
 
+.logo img {
+  width: 2.6em;
 }
 
-.toggle-btn{
+.toggle-btn {
   display: flex;
   justify-content: flex-end;
 }
 
-.burger{
+.burger {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.75em 2em 1.5em 2em ;
+  padding: 1.75em 2em 1.5em 2em;
   background: rgba(255, 255, 255, 0);
   outline: none;
   border: none;
@@ -329,7 +388,7 @@ nav > div{
 }
 
 .burger::before,
-.burger::after{
+.burger::after {
   content: "";
   width: 40px;
   height: 2px;
@@ -339,37 +398,39 @@ nav > div{
   will-change: tranform;
 }
 
-.burger::before{
+.burger::before {
   transform: translateY(-3px);
 }
 
-.burger::after{
+.burger::after {
   transform: translateY(3px);
 }
 
-.active.burger::before{
+.active.burger::before {
   transform: translateY(0) rotate(45deg);
 }
 
-.active.burger::after{
+.active.burger::after {
   transform: translateY(0) rotate(-45deg);
 }
 
-.overlay{
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: flex; /* initially hidden */
-  background: #2E4F4F;
-  clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+  display: flex;
+  /* initially hidden */
+  /* background: #2E4F4F; */
+  background-image: linear-gradient(to right top, #090024, #0d1133, #121a43, #172454, #1a2f66, #182f69, #16306b, #13306e, #0d2662, #061c56, #01124a, #00053e);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   will-change: transform;
-  
+
 }
 
-.overlay-menu{
-  position:fixed;
+.overlay-menu {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -381,37 +442,50 @@ nav > div{
   align-items: center;
 }
 
-.menu-item{
+.menu-item {
   display: flex;
   cursor: pointer;
-   clip-path: polygon(0 0,100% 0, 100% 100%, 0% 100% );
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.menu-item p{
+.menu-item p {
   position: relative;
   text-align: center;
   font-size: 15vw;
   line-height: 80%;
   will-change: tranfrom;
-  transition: letter-spacing 0.3s ;
+  transition: letter-spacing 0.3s;
   color: #CBE4DE;
 
 }
-.menu-item p:hover{
+
+.menu-item p a {
+  position: relative;
+  text-align: center;
+  font-size: 10vw;
+  line-height: 80%;
+  will-change: tranfrom;
+  transition: letter-spacing 0.3s;
+  color: #CBE4DE;
+
+}
+
+.menu-item p:hover {
   letter-spacing: 0.004em;
 }
-.menu-item p#active::after{
+
+.menu-item p#active::after {
   content: "";
   position: absolute;
-  top:45%;
+  top: 45%;
   left: 0;
   transform: translateY(-50%);
-  background: #0E8388;
-  width: 0% ;
+  background: #000000;
+  width: 0%;
   height: 12px;
 }
 
-.sub-nav{
+.sub-nav {
   position: absolute;
   bottom: 3%;
   left: 50%;
@@ -421,54 +495,56 @@ nav > div{
   opacity: 0;
 }
 
-.sub-nav p{
+.sub-nav p {
   font-family: "Canopee";
-  font-size: 20px ;
+  font-size: 20px;
   color: #5e5e5e;
 }
 
-@media(max-width:900px){
+@media(max-width:900px) {
   /* .logo a{
 
   } */
 }
 
 /* ----------------Project-Section--------------- */
-.spacer{
-  width:100%;
+.spacer {
+  width: 100%;
   height: 50vh;
   background: #ddd;
 }
 
-.projects-section{
+.projects-section {
   display: flex;
   margin: 0;
   padding: 0;
   width: 100%;
+  padding-right: 50px;
 }
-.projects-section > * {
+
+.projects-section>* {
   width: 100%;
 }
 
-.work__Left{
+.work__Left {
   position: relative;
   width: 45%;
   z-index: 2;
 }
 
-.work__text{
+.work__text {
   margin: auto;
   width: 80%;
 }
 
-.work__info{
+.work__info {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.work__num{
+.work__num {
   display: block;
   line-height: .9;
   text-align: right;
@@ -476,20 +552,21 @@ nav > div{
   transform: skewX(-20deg);
   color: red;
 }
-.title{
+
+.title {
   text-align: right;
   font-size: 70px;
   text-transform: uppercase;
   color: #CBE4DE;
 }
 
-.title .stroke{
+.title .stroke {
   display: block;
   color: transparent;
-  -webkit-text-stroke: 1px #CBE4DE ;
+  -webkit-text-stroke: 1px #CBE4DE;
 }
 
-.work__link{
+.work__link {
   display: block;
   width: 365px;
   margin-top: 50px;
@@ -507,18 +584,18 @@ nav > div{
 
 }
 
-.work__link:hover{
+.work__link:hover {
   background: #fff;
   color: #000;
-  
+
 }
 
-.work__right{
-  width: 48%;
+.work__right {
+  width: 100%;
   height: auto;
 }
 
-.work__right-bl{
+.work__right-bl {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -528,27 +605,127 @@ nav > div{
   top: 0;
 }
 
-.work__photo{
-  width: 40vw;
-  height: 30vw;
+.work__photo {
+  width: 100%;
+  height: 70%;
+  padding: 3em 0;
   position: relative;
+
 }
 
 
-.work__photo-item{
+.work__photo-item {
   position: absolute;
   width: 100%;
   height: 100%;
   cursor: pointer;
   border-radius: 3px;
   overflow: hidden;
+  border-radius: 10px;
 
-  
+
 }
 
-.work__photo-item img{
+.work__photo-item img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+
+/* ---------------Skills-section----------------- */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  background: #252525;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #000);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #000);
+}
+
+/* .logos:hover .logos-slide {
+  animation-play-state: paused;
+} */
+
+.logos-slide {
+  display: inline-flex;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logos-slide .item .marquee__text {
+  font-size: 30px;
+}
+
+.logos-slide img {
+  height: 250px;
+  margin: 0 40px;
+}
+
+.marquee__text {
+  display: inline-block;
+  position: relative;
+  padding-right: 2em;
+  text-transform: uppercase;
+  color: #afc50a;
+}
+
+
+.item .star {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  right: 0;
+  margin: 0;
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: translateY(-50%) rotate(0);
+  }
+
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
 }
