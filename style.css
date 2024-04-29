@@ -53,11 +53,12 @@ a {
   mix-blend-mode: difference;
 }
 
-.hover-this:hover~.cursor,
+/* .hover-this:hover~.cursor,
 .spacer:hover~.cursor {
-  /* Add this line to target the cursor for the entire page */
+  Add this line to target the cursor for the entire page 
   transform: translate(-50%, -50%) scale(8);
-}
+} 
+*/
 
 
 /*=============== SCROLL BAR ===============*/
@@ -508,10 +509,26 @@ nav>div {
 }
 
 /* ----------------Project-Section--------------- */
+.heading{
+  text-align: center;
+  align-items: center;
+  top: 80px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: against;
+  font-size: 80px;
+}
 .spacer {
-  width: 100%;
-  height: 50vh;
-  background: #ddd;
+
+  display: flex;
+  justify-content: center;
+
+}
+.spacer img{
+  height: 21vh;
+  filter: invert(100%);
+  width: auto;
+text-align: center;
 }
 
 .projects-section {
@@ -646,17 +663,17 @@ nav>div {
     transform: translateX(-100%);
   }
 }
-
-.logos {
+.skills-section{
   overflow: hidden;
   padding: 60px 0;
-  background: #252525;
   white-space: nowrap;
   position: relative;
+  background: #03001C;
 }
 
-.logos:before,
-.logos:after {
+
+.skills-section:before,
+.skills-section:after {
   position: absolute;
   top: 0;
   width: 250px;
@@ -665,14 +682,14 @@ nav>div {
   z-index: 2;
 }
 
-.logos:before {
+.skills-section:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), #000);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #000317);
 }
 
-.logos:after {
+.skills-section:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #000);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #000317);
 }
 
 /* .logos:hover .logos-slide {
