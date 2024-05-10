@@ -456,19 +456,21 @@ nav>div {
   line-height: 80%;
   will-change: tranfrom;
   transition: letter-spacing 0.3s;
+  text-transform: uppercase;
   color: #CBE4DE;
+
 
 }
 
 .menu-item p a {
   position: relative;
   text-align: center;
-  font-size: 10vw;
+  font-size: 7vw;
   line-height: 80%;
   will-change: tranfrom;
   transition: letter-spacing 0.3s;
   color: #CBE4DE;
-
+  font-family: against;
 }
 
 .menu-item p:hover {
