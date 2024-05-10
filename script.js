@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     isOpen = !isOpen;
   });
 
+
   //   let workInfoItems = document.querySelectorAll('.work__photo-item');
 
   // workInfoItems.forEach(function (item, index) {
