@@ -1434,7 +1434,7 @@ img {
 }
 
 /* Media query for medium screens (e.g., tablets) */
-@media only screen and (min-width: 1000px) and (max-width: 1025px) {
+@media only screen and (min-width: 1001px) and (max-width: 1025px) {
   .heading {
     font-size: 40px;
   }
@@ -1553,7 +1553,7 @@ img {
     font-size: 40px;
   }
 
-  .left-about {
+  /* .left-about {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -1592,7 +1592,7 @@ img {
 
   .right-about {
     padding: 0;
-  }
+  } */
 
   .logos-slide {
     animation: 20s slide infinite linear;
