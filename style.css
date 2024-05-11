@@ -514,7 +514,7 @@ nav>div {
 }
 
 .spacer img {
-  height: 21vh;
+  max-height: 30vh;
   filter: invert(100%);
   width: auto;
   text-align: center;
@@ -1622,10 +1622,6 @@ img {
     width: 100%;
   }
 
-  .work__Left {
-    width: 100%;
-    height: auto;
-  }
 
 
 
@@ -1655,7 +1651,6 @@ img {
 
   .work__text {
     width: 100%;
-    /* Full width on mobile */
   }
 
   .work__num {
@@ -1680,6 +1675,7 @@ img {
     margin: 20px auto;
     /* Center the button */
   }
+
   .burger::before,
   .burger::after {
     width: 25px;
