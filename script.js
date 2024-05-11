@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // -----------------------------------------------------------------
   let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
   const toggleButton = document.querySelector(".burger");
+  const menuItems = document.querySelectorAll(".menu-item p");
   let isOpen = false;
 
   gsap.set(".menu-item p", { y: 225 });
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "<"
   );
 
+  
   toggleButton.addEventListener("click", function () {
     if (isOpen) {
       timeline.reverse();
@@ -87,6 +89,14 @@ document.addEventListener("DOMContentLoaded", function () {
       timeline.play();
     }
     isOpen = !isOpen;
+  });
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener("click", () => {
+      if (isOpen) {
+        timeline.reverse();
+        isOpen = !isOpen;
+      }
+    });
   });
 
 
